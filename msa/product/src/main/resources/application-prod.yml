@@ -48,4 +48,4 @@ cloud:
     region:
       static: ap-northeast-2
     s3:
-      bucket: soldesk-product-shop-images
+      bucket: s3-bucket-202716105871
