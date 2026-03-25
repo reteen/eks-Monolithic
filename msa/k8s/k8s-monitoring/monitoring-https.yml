@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: monitoring-hanroro-click-tls
+  namespace: monitoring
+spec:
+  secretName: monitoring-hanroro-click-tls
+  duration: 2160h0m0s  		# 90d
+  renewBefore: 360h0m0s  	# 15d
+  issuerRef:
+    name: my-issuer
+    kind: ClusterIssuer
+  dnsNames:
+  - prometheus.hanroro.click
+  - grafana.hanroro.click
